@@ -1,0 +1,14 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.back{
+    height: 290px;
+    width: 400px;
+    text-align: center;
+    padding-top: 20px;
+    margin: 0px auto;
+    border: 1px solid #000;
+    font-size: 20px;
+    background: url("../img/index.png") no-repeat;
+}
