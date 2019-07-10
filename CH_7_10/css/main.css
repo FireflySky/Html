@@ -21,7 +21,9 @@ h3{
 }
 .print div{
     text-align: right;
-    width: 100%;
+    width: 350px;
+    font-weight: bold;
+    font-size: 2em;
     line-height: 33px;
 }
 .bnt table{
