@@ -5,18 +5,21 @@
 .frame{
     width: 600px;
     height: 400px;
-    margin: 20px auto;
+    margin: 0px auto;
     padding-top: 5px; 
+    position: relative;
+    z-index: 1;
     background: rgba(66, 65, 65, 0.2);
 }
 .plane{
-    widows: 560px;
+    width: 560px;
     height: 300px;
     margin: 20px;
     text-align: center;
     background: #FFF;
 }
 .plane h3{
+    padding-top: 50px;
     font-size: 100px;
     line-height: 290px;
 }
@@ -28,4 +31,51 @@
 .bnt button{
     width: 100px;
     font-size: 20px;
+}
+
+
+.ear{
+    width: 600px;
+    height: 100px;
+    margin:0px auto;
+}
+.ear_left,.ear_right{
+    width:200px;
+    height: 100px;
+    float: left;
+    margin-bottom: -200px;
+    border-radius: 100px 100px 0px 0px;
+    background: rgb(180, 128, 154);
+}
+.ear_right{
+    float: right;
+}
+
+.eye{
+    width: 600px;
+    height: 100px;
+    top: 50PX;
+    background: #000;
+    position: absolute;
+}
+.eye_left,.eye_right{
+    width: 200px;
+    height: 50px;
+    z-index: 99;
+    margin: 20px 20px;
+    display: inline-block;
+    border-radius: 0px 0px 150px 150px;
+    background: rgb(56, 206, 233);
+}
+.eye_right{
+    float:right;
+}
+.eyeball_right,.eyeball_left{
+    width: 50px;
+    height: 50px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    transition: all 1s;
+    margin-left: 10px;
 }

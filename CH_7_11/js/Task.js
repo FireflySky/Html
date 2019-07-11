@@ -4,13 +4,14 @@ window.onload = () => {
     var m="";//分钟
     var h="";//小时
     var setinter=null;
-
+    var eyes=1;
     //开始和暂停
     document.getElementById("start").onclick = function () {
         var val=this.innerHTML;
         if(val=="开始"){
             this.innerHTML="暂停";
             setinter = setInterval(() => {
+                eye();
                 date++;
                 setDate(date);
                 document.getElementById("date").innerHTML=h+":"+m+":"+s;
@@ -55,6 +56,18 @@ window.onload = () => {
             s="0"+S;
         }else{
             s=S;
+        }
+    }
+
+    function eye(){
+        if(eyes==1){
+            document.getElementById("eyeball_right").style.marginLeft="150px";
+            document.getElementById("eyeball_left").style.marginLeft="150px";
+            eyes=0;
+        }else{
+            document.getElementById("eyeball_right").style.marginLeft="10px";
+            document.getElementById("eyeball_left").style.marginLeft="10px";
+            eyes=1;
         }
     }
 }
