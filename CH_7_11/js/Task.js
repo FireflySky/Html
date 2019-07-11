@@ -6,41 +6,40 @@ window.onload = () => {
     var h="";//小时
     document.getElementById("start").onclick = function () {
         var setinter = setInterval(() => {
-            date+=1;
+            date++;
             setDate(date);
-            document.getElementById("date").innerHTML=redate;//h+":"+m+":"+s;
+            document.getElementById("date").innerHTML=h+":"+m+":"+s;
         }, 1000);
     }
 
     function setDate(date){
-        var S=0;
-        var M=0;
-        var H=0;
-
-        Math.round(date/3600);
+       
+        let H=Math.round(date/3600);
+        let  M=Math.round((date%3600)/60);
+        let S=Math.round((date%3600)%60);
         //小时
-        if(Math.round(date/3600)<1){
+        if(H<1){
             h="00";
-        }else if(Math.round(date/3600)<10&&Math.round(date/3600)>1){
-            h="0"+Math.round(date/3600);
+        }else if(H<10){
+            h="0"+H;
         }else{
-            h=Math.round(date/3600);
+            h=H;
         }
         //分钟
-        if(Math.round(date/60)<1){
-            h="00";
-        }else if(Math.round(date/60)<10&&Math.round(date/60)>1){
-            h="0"+Math.round(date/60);
+        if(M<1){
+            m="00";
+        }else if(M<10){
+            m="0"+M;
         }else{
-            h=Math.round(date/60);
+            m=M;
         }
         //秒
-        if(Math.round(date/60)<1){
-            h="00";
-        }else if(Math.round(date/60)<10&&Math.round(date/60)>1){
-            h="0"+Math.round(date/60);
+        if(S<1){
+            s="00";
+        }else if(S<10){
+            s="0"+S;
         }else{
-            h=Math.round(date/60);
+            s=S;
         }
 
     }
