@@ -4,6 +4,8 @@ window.onload = () => {
     var m="";//分钟
     var h="";//小时
     var setinter=null;
+
+    //开始和暂停
     document.getElementById("start").onclick = function () {
         var val=this.innerHTML;
         if(val=="开始"){
@@ -17,7 +19,6 @@ window.onload = () => {
             this.innerHTML="开始";
             clearInterval(setinter);
         }
-        
     }
 
     //重置
