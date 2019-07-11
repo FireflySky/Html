@@ -1,5 +1,5 @@
 window.onload = () => {
-    var date = 61;
+    var date = 3597;
     var redate = 0;
     var s="";//秒
     var m="";//分钟
@@ -14,9 +14,9 @@ window.onload = () => {
 
     function setDate(date){
        
-        let H=Math.round(date/3600);
-        let  M=Math.round((date%3600)/60);
-        let S=Math.round((date%3600)%60);
+        let H=Math.floor(date/3600);
+        let  M=Math.floor((date%3600)/60);
+        let S=Math.floor((date%3600)%60);
         //小时
         if(H<1){
             h="00";
